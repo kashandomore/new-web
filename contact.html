@@ -15,25 +15,46 @@
         </div>
     </div>
     <!-- navbar -->
-    <div class="flex justify-between container flex-wrap space-y-4 items-center mx-auto py-4 items-center md:px-0 px-4">
+    <nav class="
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
+          py-4
+          md:py-0
+          px-4
+          text-lg text-gray-700
+          bg-white
+        ">
         <div>
-            <h2 class="text-xl">IstikharaIslamic</h2>
+            <a href="./index.html" class="text-xl">IstikharaIslamic</a>
         </div>
-        <div class="space-x-6 md:block hidden">
-            <a href="./index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="./contact.html">Contact</a>
-        </div>
-        <div class="block md:hidden">
-            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path
-                  fill-rule="evenodd"
-                  d="M4 5h26a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h26a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h26a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-        </div>
-    </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+
+      <div class="hidden w-full mt-4 md:flex md:items-center md:w-auto" id="menu">
+        <ul class="
+              pt-4
+              text-base text-gray-700
+              md:flex
+              md:justify-between 
+              md:pt-0">
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="./index.html">Home</a>
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">About</a>
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Blog</a>
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="./contact.html">Contact US</a>
+          </li>
+        </ul>
+    </nav>
     <!-- bottom nav -->
     <div class="flex items-center fixed bottom-0 bg-green-600 text-white w-full h-12">
         <marquee behavior="" direction="right">اسلام و علیکم میری بہنوں بھائیوں اگر آپ پر کسی نے جادو ٹونہ اور تعویزات کر دیئے ہے اور آپ اس وجہ سے زندگی میں پریشان ہے تو پریشان ہونا چھوڑیں ابھی ہرقسم کے مسائل کا حل اسلامی طریقے سے فی سبیل اللہ کروائیں۔  </marquee>
@@ -174,7 +195,15 @@
 <a href="https://componentity.com" target="_blank" class="block">
   <img src="http://codenawis.com/componentity/wp-content/uploads/2020/08/logo-componentity-%E2%80%93-9.png" class="w-48 mx-auto my-5">
 </a>
+<script>
+          const button = document.querySelector("#menu-button");
+const menu = document.querySelector("#menu");
 
+button.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+</script>
 
 
 </body>
